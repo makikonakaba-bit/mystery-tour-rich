@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>羽田発ミステリーツアー</title>
+<!-- 丸ゴシックのフォント（Zen Maru Gothic）を読み込む -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+<!-- CSSを読み込む -->
+<link rel="stylesheet" href="css/style.css">
+<!-- jQueryを読み込む -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+ 
+<div class="wrap">
+ 
+    <!-- ===== ヘッダー ===== -->
+    <header class="header">
+        <p class="header-sub">MYSTERY TOUR</p>
+        <h1 class="header-title">羽田発ミステリーツアー</h1>
+        <p class="header-text">予算を選ぶと、行き先が決まります。<br>どこへ行くかは、おたのしみ。</p>
+    </header>
+ 
+    <!-- ===== ボタン（自分の手：予算） ===== -->
+    <ul class="buttons">
+        <li id="btn_2" class="btn">2万円</li>
+        <li id="btn_5" class="btn">5万円</li>
+        <li id="btn_10" class="btn">10万円</li>
+    </ul>
+ 
+     <!-- 切符をいったん消して、ゆっくり出す -->
+  
+
+    <section id="ticket" class="ticket">
+        <p class="ticket-label">TICKET</p>
+        <p id="photo" class="ticket-photo"></p>
+        <p class="ticket-row">出発：羽田　／　予算：<span id="budget"></span></p>
+        <p class="ticket-to">行き先</p>
+        <p id="place" class="ticket-place"></p>
+        <p id="message" class="ticket-message"></p>
+    </section>
+ 
+    <!-- ===== フッター ===== -->
+    <footer class="footer">いってらっしゃい。</footer>
+ 
+</div>
+ 
+<script>
+// ① 「2万円」を押したとき
+    $("#ticket").fadeOut(0).fadeIn(1000);
+$("#btn_2").on("click", function () {
+    $("#budget").html("2万円");
+ 
+    const r = Math.random();
+    const n = Math.ceil(r * 3);
+ 
+    if (n == 1) {
+        $("#place").html("ソウル");
+        $("#photo").html('<img src="img/seul.jpg" alt="ソウル">');
+        $("#message").html("屋台で食べ歩き。夜まで楽しめる街へ。");
+    }
+    if (n == 2) {
+        $("#place").html("台湾");
+        $("#photo").html('<img src="img/taiwan.jpg" alt="台湾">');
+        $("#message").html("夜市と小籠包。あたたかい島へ。");
+    }
+    if (n == 3) {
+        $("#place").html("宮古島");
+        $("#photo").html('<img src="img/miyako.jpg" alt="宮古島">');
+        $("#message").html("宮古ブルーの海に、ただ浮かぶ旅。");
+    }
+ 
+    // ガラガラを2秒まわしてから、切符を出す
+    $("#ticket").fadeOut(0);
+    $("#garagara").fadeIn(0).delay(2000).fadeOut(200);
+    $("#ticket").delay(2200).fadeIn(1000);
+});
+ 
+// ② 「5万円」を押したとき
+$("#ticket").fadeOut(0).fadeIn(1000);
+$("#btn_5").on("click", function () {
+    $("#budget").html("5万円");
+ 
+    const r = Math.random();
+    const n = Math.ceil(r * 3);
+ 
+    if (n == 1) {
+        $("#place").html("バンコク");
+        $("#photo").html('<img src="img/bankok.jpg" alt="バンコック">');
+        $("#message").html("寺院と屋台。にぎやかな熱気の街へ。");
+    }
+    if (n == 2) {
+        $("#place").html("シンガポール");
+        $("#photo").html('<img src="img/sangapole.jpg" alt="シンガポール">');
+        $("#message").html("緑と高層ビルがとけあう街へ。");
+    }
+    if (n == 3) {
+        $("#place").html("ホノルル");
+        $("#photo").html('<img src="img/hawaii.jpg" alt="ホノルル">');
+        $("#message").html("波の音とやさしい風に、ゆるむ旅。");
+    }
+ 
+    // ガラガラを2秒まわしてから、切符を出す
+    $("#ticket").fadeOut(0);
+    $("#garagara").fadeIn(0).delay(2000).fadeOut(200);
+    $("#ticket").delay(2200).fadeIn(1000);
+});
+ 
+// ③ 「10万円」を押したとき
+$("#ticket").fadeOut(0).fadeIn(1000);
+$("#btn_10").on("click", function () {
+    $("#budget").html("10万円");
+ 
+    const r = Math.random();
+    const n = Math.ceil(r * 3);
+ 
+    if (n == 1) {
+        $("#place").html("ロンドン");
+        $("#photo").html('<img src="img/London.jpg" alt="ロンドン">');
+        $("#message").html("美術館と紅茶。歴史の街を歩く旅。");
+    }
+    if (n == 2) {
+        $("#place").html("シドニー");
+        $("#photo").html('<img src="img/sydony.jpg" alt="シドニー">');
+        $("#message").html("オペラハウスを望む、港町の旅。");
+    }
+    if (n == 3) {
+        $("#place").html("ロサンゼルス");
+        $("#photo").html('<img src="img/los angeles.jpg" alt="ロサンゼルス">');
+        $("#message").html("青い空とビーチ。映画の街へ。");
+    }
+ 
+    // ガラガラを2秒まわしてから、切符を出す
+    $("#ticket").fadeOut(0);
+    $("#garagara").fadeIn(0).delay(2000).fadeOut(200);
+    $("#ticket").delay(2200).fadeIn(1000);
+});
+</script>
+</body>
+</html>
