@@ -40,6 +40,7 @@
         <p class="ticket-to">行き先</p>
         <p id="place" class="ticket-place"></p>
         <p id="message" class="ticket-message"></p>
+        <p id="upgrade"></p>
     </section>
  
     <!-- ===== フッター ===== -->
@@ -71,6 +72,14 @@ $("#btn_2").on("click", function () {
         $("#photo").html('<img src="img/miyako.jpg" alt="宮古島">');
         $("#message").html("宮古ブルーの海に、ただ浮かぶ旅。");
     }
+
+    //10人に一人、ビジネスクラスにアップグレード
+    $("#upgrade").html("");
+    const r2 = Math.random();
+    const u = Math.ceil(r2 * 10);
+    if (u == 10){
+        $("#upgrade").html("✈ おめでとうございます！ビジネスクラスにアップグレード");
+    }
  
     // ガラガラを2秒まわしてから、切符を出す
     $("#ticket").fadeOut(0);
@@ -101,7 +110,14 @@ $("#btn_5").on("click", function () {
         $("#photo").html('<img src="img/hawaii.jpg" alt="ホノルル">');
         $("#message").html("波の音とやさしい風に、ゆるむ旅。");
     }
- 
+
+     //10人に一人、ビジネスクラスにアップグレード
+    $("#upgrade").html("");
+    const r2 = Math.random();
+    const u = Math.ceil(r2 * 10);
+    if (u == 10){
+        $("#upgrade").html("✈ おめでとうございます！ビジネスクラスにアップグレード");
+    }
     // ガラガラを2秒まわしてから、切符を出す
     $("#ticket").fadeOut(0);
     $("#garagara").fadeIn(0).delay(2000).fadeOut(200);
@@ -130,6 +146,14 @@ $("#btn_10").on("click", function () {
         $("#place").html("ロサンゼルス");
         $("#photo").html('<img src="img/los angeles.jpg" alt="ロサンゼルス">');
         $("#message").html("青い空とビーチ。映画の街へ。");
+    }
+ 
+    //10人に一人、ビジネスクラスにアップグレード
+    $("#upgrade").html("");
+    const r2 = Math.random();
+    const u = Math.ceil(r2 * 10);
+    if (u == 10){
+        $("#upgrade").html("✈ おめでとうございます！ビジネスクラスにアップグレード");
     }
  
     // ガラガラを2秒まわしてから、切符を出す
