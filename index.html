@@ -75,10 +75,12 @@ $("#btn_2").on("click", function () {
 
     //5人に一人、ビジネスクラスにアップグレード
     $("#upgrade").html("");
+      $("#upgrade").fadeOut(0);
     const r2 = Math.random();
     const u = Math.ceil(r2 * 5);
     if (u == 5){
-        $("#upgrade").html("✈ おめでとうございます！ビジネスクラスにアップグレード");
+        $("#upgrade").html("✈ おめでとうございます！<br>ビジネスクラスにアップグレード");
+                $("#upgrade").fadeOut(0).delay(3200).fadeIn(1500);
     }
  
     // ガラガラを2秒まわしてから、切符を出す
@@ -112,11 +114,13 @@ $("#btn_5").on("click", function () {
     }
 
      //5人に一人、ビジネスクラスにアップグレード
-    $("#upgrade").html("");
+       $("#upgrade").html("");
+      $("#upgrade").fadeOut(0);
     const r2 = Math.random();
     const u = Math.ceil(r2 * 5);
     if (u == 5){
-        $("#upgrade").html("✈ おめでとうございます！ビジネスクラスにアップグレード");
+        $("#upgrade").html("✈ おめでとうございます！<br>ビジネスクラスにアップグレード");
+                $("#upgrade").fadeOut(0).delay(3200).fadeIn(1500);
     }
     // ガラガラを2秒まわしてから、切符を出す
     $("#ticket").fadeOut(0);
@@ -149,11 +153,14 @@ $("#btn_10").on("click", function () {
     }
  
     //5人に一人、ビジネスクラスにアップグレード
-    $("#upgrade").html("");
+
+        $("#upgrade").html("");
+      $("#upgrade").fadeOut(0);
     const r2 = Math.random();
     const u = Math.ceil(r2 * 5);
-    if (u == 5 ){
-        $("#upgrade").html("✈ おめでとうございます！ビジネスクラスにアップグレード");
+    if (u == 5){
+        $("#upgrade").html("✈ おめでとうございます！<br>ビジネスクラスにアップグレード");
+                $("#upgrade").fadeOut(0).delay(3200).fadeIn(1500);
     }
  
     // ガラガラを2秒まわしてから、切符を出す
